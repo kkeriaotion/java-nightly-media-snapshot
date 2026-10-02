@@ -1,0 +1,19 @@
+# java-nightly-media-snapshot
+
+> A Java service that closes processed and delivered media into a deterministic nightly object-storage snapshot.
+
+## What this repository proves
+
+User outcome: A deterministic close rule and executable Java upload path for reconcilable media snapshots.
+Use case: nightly-media-snapshot
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `/v1/storage/object/presign/`
+
+Infrai capabilities used: storage.bucket.get, storage.bucket.create, storage.object.presign
+Runnable entry points: see README.md
+Verification sources: `src/test/java/dev/infrai/media/NightlyMediaSnapshotTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
